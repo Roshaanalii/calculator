@@ -1,106 +1,29 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Calculator</title>
+    <title>Document</title>
 </head>
-
 <body>
-
-    <form>
-        num1: <input type="number" id="num1">
-        <br> <br>
-        num2: <input type="number" id="num2">
-        <br> <br>
-        <button type="submit" onclick="doSum(); return false">Sum</button>
-        <button type="submit" onclick="doSub(); return false">Minus</button>
-        <button type="submit" onclick="doProduct(); return false">Product</button>
-        <button type="submit" onclick="doDivide(); return false">Divide</button>
-        <button type="submit" onclick="doModulus(); return false">Remainder</button>
+    <h3>Enter a number</h3>
+    <form onsubmit="mod();return false">
+        <input type="number"  id="n1">
+       
+        <button type="submit">Check</button>
     </form>
-        <h2 id = "result"></h2>
-
+    <h3>(1 = odd / 0 = even)</h3>
+    <h3 id="result"></h2>
     <script>
-        function doSum() {
-
-            let num1= document.querySelector("#num1").value
-            let num2=document.querySelector("#num2").value
-
-            num1= Number (num1);
-            num2= Number (num2);
-
-            console.log("num1",num1);
-            console.log("num2",num2);
-           
-            let result1= num1 + num2; 
-
-            document.querySelector("#result").innerHTML=result1;
-        }
-
-        function doSub() {
-            let num1= document.querySelector("#num1").value
-            let num2= document.querySelector("#num2").value
-
-            num1= Number (num1);
-            num2 = Number (num2);
-
-            console.log("num1", num1);
-            console.log("num2", num2);
-               
-            let result1= num1 - num2;
-          
-            document.querySelector("#result").innerHTML=result1;
-        }
-        function doProduct(){
-            let num1=document.querySelector("#num1").value
-            let num2=document.querySelector("#num2").value
-
-            num1= Number (num1);
-            num2=Number (num2);
-
-            console.log("num1", num1);
-            console.log("num2", num2);
-           
-            let result1= num1 * num2;
-            
-            document.querySelector("#result").innerHTML=result1;
-        }
-
-        function doDivide(){
-
-            let num1=document.querySelector("#num1").value
-            let num2=document.querySelector("#num2").value
-
-            num1= Number (num1);
-            num2=Number (num2);
-
-            console.log("num1", num1);
-            console.log("num2", num2);
-            
-            let result1= num1 / num2;
-            
-            document.querySelector("#result").innerHTML=result1;
-        }
-        function doModulus(){
-
- let num1=document.querySelector("#num1").value
-            let num2=document.querySelector("#num2").value
-
-            num1= Number (num1);
-            num2=Number (num2);
-
-            console.log("num1", num1);
-            console.log("num2", num2);
-            
-            let result1= num1 % num2;
-            
-            document.querySelector("#result").innerHTML=result1;
-        }
+        function mod(){
+        let n1=document.querySelector("#n1").value;
+        n1=  Number(n1);
+        let result = n1%2;
+        document.querySelector("#result").innerHTML = result;
+    
+    }
     </script>
 </body>
-
 </html>
